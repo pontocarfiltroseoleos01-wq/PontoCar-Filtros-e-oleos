@@ -1,11 +1,11 @@
 /* ============================================================
    PONTO CAR — ESTOQUE DA LOJA (estoque.js)
-   Gerado pelo Painel ponto car em 11/11/2026, 12:20:30.
+   Gerado pelo Painel ponto car em 11/11/2026, 12:20:46.
    Para mudar: use o 🔒 Painel no site, clique em "Salvar estoque"
    e suba este arquivo no GitHub (substituindo o antigo).
    ============================================================ */
 window.PONTOCAR = {
-  "atualizado": 1794410426560,
+  "atualizado": 1794410441420,
   "loja": {
     "nome": "Ponto Car",
     "frase": "O ponto certo do seu carro",
@@ -75,10 +75,6 @@ window.PONTOCAR = {
     {
       "id": "aditivos",
       "nome": "Aditivos e fluidos"
-    },
-    {
-      "id": "pk",
-      "nome": "pk"
     }
   ],
   "produtos": [
