@@ -117,7 +117,7 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 /* ---------- Produtos ---------- */
 .grid{display:grid;grid-template-columns:1fr;gap:12px}
 @media (min-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:1180px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1400px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .card{background:#fff;color:var(--grafite);border:1px solid var(--cinza);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow)}
 .card.falta{opacity:.78}
 .card{cursor:pointer;transition:transform .12s,box-shadow .12s}
@@ -169,6 +169,9 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 .opt:disabled{opacity:.45;cursor:not-allowed}
 .card-bot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:stretch;justify-content:space-between;gap:8px;padding-top:6px}
 .card-bot > *{flex:1 1 auto;justify-content:center}
+.preco:has(s),.preco:has(small){flex-direction:column;align-items:center;justify-content:center;gap:1px;line-height:1.05}
+.preco:has(s) s,.preco small{font-size:11.5px;margin:0}
+.card-bot .preco{font-size:19px}
 .preco{background:var(--ouro);color:var(--grafite);font-weight:900;font-size:18px;border-radius:12px;padding:0 12px;white-space:nowrap;height:48px;min-height:48px;line-height:1;display:inline-flex;align-items:center;gap:6px;box-sizing:border-box}
 .btn{border:0;border-radius:12px;padding:12px 16px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;line-height:1.1}
 .btn-ouro{background:var(--ouro);color:var(--grafite)}
@@ -179,7 +182,8 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 .btn-sm{padding:8px 12px;font-size:14px;border-radius:10px}
 .btn:disabled{opacity:.5;cursor:not-allowed}
 .card-bot .btn,.card-bot .add{height:48px;min-height:48px;padding-top:0;padding-bottom:0;line-height:1;box-sizing:border-box}
-.add{min-width:120px}
+.add{min-width:110px}
+.card-bot .add{padding-left:12px;padding-right:12px}
 .card-bot .step{height:48px}
 .step{display:inline-flex;align-items:center;background:var(--ouro);color:var(--grafite);border-radius:12px;overflow:hidden;min-width:132px;justify-content:space-between}
 .step button{border:0;background:transparent;width:44px;height:48px;font-size:22px;font-weight:900;color:var(--grafite)}
@@ -551,7 +555,7 @@ footer.rod .rod-mapa{color:var(--ouro);font-weight:700}
   <div id="endRod"></div>
   <div>Pedidos pelo WhatsApp <span id="zapsRod"></span></div>
   <div id="redesRod"></div>
-  <div style="font-size:10px;opacity:.45;margin-top:8px">versão 12/11 · 12h00</div>
+  <div style="font-size:10px;opacity:.45;margin-top:8px">versão 12/11 · 12h05</div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
