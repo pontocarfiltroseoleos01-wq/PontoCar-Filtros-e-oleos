@@ -168,7 +168,7 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 .opt[aria-pressed=true]{border-color:var(--bandeira);background:#E6F4EC}
 .opt:disabled{opacity:.45;cursor:not-allowed}
 .card-bot{margin-top:auto;display:flex;align-items:stretch;justify-content:space-between;gap:10px;padding-top:6px}
-.preco{background:var(--ouro);color:var(--grafite);font-weight:900;font-size:18px;border-radius:12px;padding:0 12px;white-space:nowrap;min-height:46px;display:inline-flex;align-items:center;gap:6px;box-sizing:border-box}
+.preco{background:var(--ouro);color:var(--grafite);font-weight:900;font-size:18px;border-radius:12px;padding:0 12px;white-space:nowrap;height:48px;min-height:48px;line-height:1;display:inline-flex;align-items:center;gap:6px;box-sizing:border-box;flex:0 0 auto}
 .btn{border:0;border-radius:12px;padding:12px 16px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;line-height:1.1}
 .btn-ouro{background:var(--ouro);color:var(--grafite)}
 .btn-ouro:hover{filter:brightness(1.05)}
@@ -177,9 +177,11 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 .btn-perigo{background:#B3261E;color:#fff}
 .btn-sm{padding:8px 12px;font-size:14px;border-radius:10px}
 .btn:disabled{opacity:.5;cursor:not-allowed}
-.add{min-width:132px;min-height:46px;box-sizing:border-box}
+.card-bot .btn,.card-bot .add{height:48px;min-height:48px;padding-top:0;padding-bottom:0;line-height:1;box-sizing:border-box}
+.add{min-width:132px}
+.card-bot .step{height:48px}
 .step{display:inline-flex;align-items:center;background:var(--ouro);color:var(--grafite);border-radius:12px;overflow:hidden;min-width:132px;justify-content:space-between}
-.step button{border:0;background:transparent;width:44px;height:46px;font-size:22px;font-weight:900;color:var(--grafite)}
+.step button{border:0;background:transparent;width:44px;height:48px;font-size:22px;font-weight:900;color:var(--grafite)}
 .step button:hover{background:rgba(0,0,0,.08)}
 .step output{font-weight:900;font-size:17px;min-width:28px;text-align:center}
 .vazio{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:28px 18px;text-align:center;color:var(--muted)}
@@ -548,6 +550,7 @@ footer.rod .rod-mapa{color:var(--ouro);font-weight:700}
   <div id="endRod"></div>
   <div>Pedidos pelo WhatsApp <span id="zapsRod"></span></div>
   <div id="redesRod"></div>
+  <div style="font-size:10px;opacity:.45;margin-top:8px">versão 12/11 · 11h50</div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
