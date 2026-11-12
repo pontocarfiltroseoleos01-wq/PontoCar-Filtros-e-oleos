@@ -1,11 +1,11 @@
 /* ============================================================
    PONTO CAR — ESTOQUE DA LOJA (estoque.js)
-   Gerado pelo Painel ponto car em 11/11/2026, 12:20:46.
+   Gerado pelo Painel ponto car em 12/11/2026, 11:31:41.
    Para mudar: use o 🔒 Painel no site, clique em "Salvar estoque"
    e suba este arquivo no GitHub (substituindo o antigo).
    ============================================================ */
 window.PONTOCAR = {
-  "atualizado": 1794410441420,
+  "atualizado": 1794493891879,
   "loja": {
     "nome": "Ponto Car",
     "frase": "O ponto certo do seu carro",
@@ -17,7 +17,7 @@ window.PONTOCAR = {
     "pixTipo": "telefone",
     "pixNome": "Cristian de Freitas Pereira",
     "pixCidade": "ITUVERAVA - SP",
-    "senhaHash": "ed946f65d2c785d90e827c5ffd879ce3b49c68d4c88013074176a7e73bc58bcf",
+    "senhaHash": "37db4a4902819de91722acce1d73d52995efcbe305f6b646758416ca8561a4aa",
     "contador": "pontocar-cab15a8fdab7",
     "endereco": "",
     "horario": "",
@@ -143,6 +143,26 @@ window.PONTOCAR = {
       "combina": []
     }
   ],
-  "kits": [],
+  "kits": [
+    {
+      "id": "fmk9fh3",
+      "nome": "Kit Filtro de Ar",
+      "descricao": "Filtro de ar do motor + filtro de ar-condicionado para Chevrolet S10 2012 em diante. Tudo pra revisão em um pedido só.",
+      "itens": [
+        {
+          "pid": "2fnalxp",
+          "oi": -1,
+          "qtd": 1
+        },
+        {
+          "pid": "zvqxgpn",
+          "oi": -1,
+          "qtd": 1
+        }
+      ],
+      "preco": 104.8,
+      "ativo": true
+    }
+  ],
   "cupons": []
 };
