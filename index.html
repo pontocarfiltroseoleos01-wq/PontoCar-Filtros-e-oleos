@@ -145,7 +145,7 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 .faixa-ofertas{min-width:0;max-width:100%}
 .faixa-ofertas h2{margin:4px 2px 8px;font-size:18px;font-weight:900}
 .faixa{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x mandatory}
-.faixa .card{flex:0 0 270px;scroll-snap-align:start}
+.faixa .card{flex:0 0 300px;max-width:85vw;scroll-snap-align:start;box-sizing:border-box}
 .promo-campos{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-top:10px}
 .promo-campo span{display:block;font-size:13px;font-weight:700;margin-bottom:4px}
 .promo-campo s{color:var(--muted);font-weight:500}
@@ -167,8 +167,9 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 .opt{border:1.5px solid var(--cinza);background:#fff;color:var(--grafite);border-radius:10px;padding:6px 10px;font-size:13px;font-weight:600}
 .opt[aria-pressed=true]{border-color:var(--bandeira);background:#E6F4EC}
 .opt:disabled{opacity:.45;cursor:not-allowed}
-.card-bot{margin-top:auto;display:flex;align-items:stretch;justify-content:space-between;gap:10px;padding-top:6px}
-.preco{background:var(--ouro);color:var(--grafite);font-weight:900;font-size:18px;border-radius:12px;padding:0 12px;white-space:nowrap;height:48px;min-height:48px;line-height:1;display:inline-flex;align-items:center;gap:6px;box-sizing:border-box;flex:0 0 auto}
+.card-bot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:stretch;justify-content:space-between;gap:8px;padding-top:6px}
+.card-bot > *{flex:1 1 auto;justify-content:center}
+.preco{background:var(--ouro);color:var(--grafite);font-weight:900;font-size:18px;border-radius:12px;padding:0 12px;white-space:nowrap;height:48px;min-height:48px;line-height:1;display:inline-flex;align-items:center;gap:6px;box-sizing:border-box}
 .btn{border:0;border-radius:12px;padding:12px 16px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;line-height:1.1}
 .btn-ouro{background:var(--ouro);color:var(--grafite)}
 .btn-ouro:hover{filter:brightness(1.05)}
@@ -178,7 +179,7 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 .btn-sm{padding:8px 12px;font-size:14px;border-radius:10px}
 .btn:disabled{opacity:.5;cursor:not-allowed}
 .card-bot .btn,.card-bot .add{height:48px;min-height:48px;padding-top:0;padding-bottom:0;line-height:1;box-sizing:border-box}
-.add{min-width:132px}
+.add{min-width:120px}
 .card-bot .step{height:48px}
 .step{display:inline-flex;align-items:center;background:var(--ouro);color:var(--grafite);border-radius:12px;overflow:hidden;min-width:132px;justify-content:space-between}
 .step button{border:0;background:transparent;width:44px;height:48px;font-size:22px;font-weight:900;color:var(--grafite)}
@@ -550,7 +551,7 @@ footer.rod .rod-mapa{color:var(--ouro);font-weight:700}
   <div id="endRod"></div>
   <div>Pedidos pelo WhatsApp <span id="zapsRod"></span></div>
   <div id="redesRod"></div>
-  <div style="font-size:10px;opacity:.45;margin-top:8px">versão 12/11 · 11h50</div>
+  <div style="font-size:10px;opacity:.45;margin-top:8px">versão 12/11 · 12h00</div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
