@@ -6,6 +6,19 @@
 <title>Ponto Car — O ponto certo do seu carro</title>
 <meta name="description" content="Ponto Car: filtros e óleos para o seu carro. Escolha, monte seu pedido e envie pelo WhatsApp.">
 <meta name="theme-color" content="#07120D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ponto Car">
+<meta property="og:title" content="Ponto Car — O ponto certo do seu carro">
+<meta property="og:description" content="Filtros e óleos para o seu carro. Pesquise pelo modelo, escolha e faça seu pedido pelo WhatsApp.">
+<meta property="og:url" content="https://pontocarfiltroseoleos01-wq.github.io/PontoCar-Filtros-e-oleos/">
+<meta property="og:image" content="https://pontocarfiltroseoleos01-wq.github.io/PontoCar-Filtros-e-oleos/preview.jpg">
+<meta property="og:image:secure_url" content="https://pontocarfiltroseoleos01-wq.github.io/PontoCar-Filtros-e-oleos/preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mascote da Ponto Car fazendo joia, com o nome da loja e a frase O ponto certo do seu carro">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -154,8 +167,8 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 .opt{border:1.5px solid var(--cinza);background:#fff;color:var(--grafite);border-radius:10px;padding:6px 10px;font-size:13px;font-weight:600}
 .opt[aria-pressed=true]{border-color:var(--bandeira);background:#E6F4EC}
 .opt:disabled{opacity:.45;cursor:not-allowed}
-.card-bot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:6px}
-.preco{background:var(--ouro);color:var(--grafite);font-weight:900;font-size:18px;border-radius:10px;padding:4px 10px;white-space:nowrap}
+.card-bot{margin-top:auto;display:flex;align-items:stretch;justify-content:space-between;gap:10px;padding-top:6px}
+.preco{background:var(--ouro);color:var(--grafite);font-weight:900;font-size:18px;border-radius:12px;padding:0 12px;white-space:nowrap;min-height:46px;display:inline-flex;align-items:center;gap:6px;box-sizing:border-box}
 .btn{border:0;border-radius:12px;padding:12px 16px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;line-height:1.1}
 .btn-ouro{background:var(--ouro);color:var(--grafite)}
 .btn-ouro:hover{filter:brightness(1.05)}
@@ -164,9 +177,9 @@ header.top{position:sticky;top:0;z-index:30;background:var(--preto);color:#fff;b
 .btn-perigo{background:#B3261E;color:#fff}
 .btn-sm{padding:8px 12px;font-size:14px;border-radius:10px}
 .btn:disabled{opacity:.5;cursor:not-allowed}
-.add{min-width:132px}
+.add{min-width:132px;min-height:46px;box-sizing:border-box}
 .step{display:inline-flex;align-items:center;background:var(--ouro);color:var(--grafite);border-radius:12px;overflow:hidden;min-width:132px;justify-content:space-between}
-.step button{border:0;background:transparent;width:44px;height:44px;font-size:22px;font-weight:900;color:var(--grafite)}
+.step button{border:0;background:transparent;width:44px;height:46px;font-size:22px;font-weight:900;color:var(--grafite)}
 .step button:hover{background:rgba(0,0,0,.08)}
 .step output{font-weight:900;font-size:17px;min-width:28px;text-align:center}
 .vazio{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:28px 18px;text-align:center;color:var(--muted)}
@@ -1328,7 +1341,7 @@ function ghFetch(url, opts, token){ opts = opts || {}; return fetch(url, Object.
 const ghUrlArquivo = c => `https://api.github.com/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.repo)}/contents/estoque.js`;
 function ghErro(st){
   if (st === 401) return 'A chave do GitHub está errada ou venceu. Gere uma nova e cole em 🔗 Conexão com o GitHub.';
-  if (st === 403) return 'A chave não tem permissão para gravar. Ao criar a chave, marque Contents: Read and write.';
+  if (st === 403) return 'A chave não tem permissão para gravar. No GitHub, edite a chave: em Acesso ao repositório escolha PontoCar-Filtros-e-oleos e em Permissões → Repositórios → Conteúdo marque Leitura e gravação.';
   if (st === 404) return 'Não achei o repositório ou o arquivo. Confira o usuário, o nome do repositório e se a chave tem acesso a ele.';
   if (st === 409 || st === 422) return 'O arquivo mudou no GitHub enquanto publicava. Tente de novo.';
   if (!/github\.io$/i.test(location.hostname)) return 'Aqui na prévia não dá para publicar. Use o painel do site publicado no GitHub.';
@@ -1360,10 +1373,10 @@ function abrirConexaoGH(){
       <b>Como criar a chave:</b>
       <ol style="margin:8px 0 0;padding-left:20px">
         <li>Logada na conta da loja no GitHub, abra: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener" style="color:var(--bandeira);font-weight:700">github.com/settings/personal-access-tokens/new</a></li>
-        <li>Em <b>Token name</b>, escreva <b>Painel Ponto Car</b>. Em <b>Expiration</b>, escolha a maior validade.</li>
-        <li>Em <b>Repository access</b>, marque <b>Only select repositories</b> e escolha <b>${esc(c.repo)}</b>.</li>
-        <li>Em <b>Permissions</b> → <b>Repository permissions</b> → <b>Contents</b>, escolha <b>Read and write</b>.</li>
-        <li>Clique em <b>Generate token</b>, copie a chave (começa com <b>github_pat_</b>) e cole abaixo.</li>
+        <li>Em <b>Nome do token</b> (Token name), escreva <b>Painel Ponto Car</b>. Em <b>Expiração</b>, escolha a maior validade.</li>
+        <li>Em <b>Acesso ao repositório</b>, marque <b>Apenas repositórios selecionados</b> e escolha <b>${esc(c.repo)}</b>.</li>
+        <li>Em <b>Permissões</b>, abra a aba <b>Repositórios</b> → <b>+ Adicionar permissões</b> → <b>Conteúdo</b> e escolha <b>Leitura e gravação</b>. (Na aba Conta não precisa nada.)</li>
+        <li>Clique em <b>Gerar token</b>, copie a chave (começa com <b>github_pat_</b>) e cole abaixo.</li>
       </ol>
     </div>
     <form id="fGH" novalidate>
