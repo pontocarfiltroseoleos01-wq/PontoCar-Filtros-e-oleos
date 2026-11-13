@@ -1,11 +1,11 @@
 /* ============================================================
    PONTO CAR — ESTOQUE DA LOJA (estoque.js)
-   Gerado pelo Painel ponto car em 12/11/2026, 12:23:08.
+   Gerado pelo Painel ponto car em 13/11/2026, 18:51:29.
    Para mudar: use o 🔒 Painel no site, clique em "Salvar estoque"
    e suba este arquivo no GitHub (substituindo o antigo).
    ============================================================ */
 window.PONTOCAR = {
-  "atualizado": 1794496961540,
+  "atualizado": 1794606684158,
   "loja": {
     "nome": "Ponto Car",
     "frase": "O ponto certo do seu carro",
@@ -142,7 +142,8 @@ window.PONTOCAR = {
       "falta": false,
       "similares": "Chevrolet 12640445, Chevrolet 55509268, Chevrolet 12706595, Chevrolet 12670058, Chevrolet 12696048, Tecfil PSL612, Wega WO139, Mahle OC1055",
       "link": "filtro-oleo-w7561",
-      "combina": []
+      "combina": [],
+      "maisVendido": true
     }
   ],
   "kits": [
